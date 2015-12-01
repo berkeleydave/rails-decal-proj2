@@ -3,6 +3,4 @@ class User < ActiveRecord::Base
   validates :phone, uniqueness: true
   validates :phone, presence: true
   validates :name, presence: true
-  validates :age, presence: true
-  validates :sex, presence: true
 end
