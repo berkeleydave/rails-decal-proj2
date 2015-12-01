@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pois/new'
+
   root to: 'home#index'
   
   devise_for :trainers
