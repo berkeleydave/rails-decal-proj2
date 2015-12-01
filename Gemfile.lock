@@ -68,6 +68,7 @@ GEM
     foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    geocoder (1.2.12)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -181,6 +182,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   foundation-rails (= 5.4.5)
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   pg
