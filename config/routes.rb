@@ -3,13 +3,14 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   
-  devise_for :trainers
-  resources :trainers
+  devise_for :users
+  resources :users
 
-  resources :pokemons, only:[:new, :create]
+  resources :users, only:[:new, :create]
+  resources :groups, only:[:new, :create]
 
-  patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
-  patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
+  # patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
+  # patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
 
   # get "pokemons/new", to: "pokemons#new"
   # get "pokemons/:id", to: "pokemons#show", as :pokemon
