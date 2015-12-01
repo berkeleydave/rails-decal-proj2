@@ -37516,3 +37516,13 @@ Processing by HomeController#index as HTML
   Rendered layouts/_navigation.html.erb (1.7ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 138ms (Views: 136.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trainers/edit" for 127.0.0.1 at 2015-11-30 19:41:04 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mTrainer Load (0.1ms)[0m  [1mSELECT  "trainers".* FROM "trainers" WHERE "trainers"."id" = ?  ORDER BY "trainers"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 136ms (Views: 134.0ms | ActiveRecord: 0.1ms)
