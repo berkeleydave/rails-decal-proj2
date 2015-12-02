@@ -6,8 +6,13 @@ class UsersController < ApplicationController
   	@user = User.new
   end
   def create
-  	@user = User.create(user_params)
+    puts "hello666" , "", ""
+     render plain: params[:article].inspect
+    #@user = User.new(user_params)
+    #@user.save
+    #redirect_to @article
+  private
   def user_params
-  	params.require(:user).permit(:name)
+  	params.require(:user).permit(:name, :phone, :email, :password, :password_confirmation)
   end
  end
