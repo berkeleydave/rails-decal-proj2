@@ -57598,3 +57598,100 @@ Migrating to AddNameToGroups (20151202080017)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Eaters"], ["created_at", "2015-12-02 08:00:37.744274"], ["updated_at", "2015-12-02 08:00:37.744274"]]
   [1m[35m (0.7ms)[0m  commit transaction
 >>>>>>> 616b8e3aa8a076d80149f761786b5561cf207679
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToGroups (20151202080017)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "groups" ADD "name" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151202080017"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trainers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trainers_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trainers_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trainers_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations" WHERE "locations"."name" = 'Berkeley' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Berkeley"], ["created_at", "2015-12-02 08:09:11.567392"], ["updated_at", "2015-12-02 08:09:11.567392"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mLocation Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "locations" WHERE "locations"."name" = 'Oakland' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Oakland"], ["created_at", "2015-12-02 08:09:11.581085"], ["updated_at", "2015-12-02 08:09:11.581085"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations" WHERE "locations"."name" = 'Fremont' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Fremont"], ["created_at", "2015-12-02 08:09:11.586369"], ["updated_at", "2015-12-02 08:09:11.586369"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'armaan@groupie.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'armaan@groupie.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'armaan@groupie.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."phone" = 72153548 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password", "age", "sex", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Armaan"], ["email", "armaan@groupie.com"], ["encrypted_password", "$2a$10$7rRb3QIjeYrknd2t2OXp7u3CRsEHzGFQF7CAPDOa3x8A4qjSorgjy"], ["age", 20], ["sex", "male"], ["phone", 72153548], ["created_at", "2015-12-02 08:09:11.685806"], ["updated_at", "2015-12-02 08:09:11.685806"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar@groupie.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar@groupie.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar@groupie.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" = 31332254 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "age", "sex", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Omkar"], ["email", "omkar@groupie.com"], ["encrypted_password", "$2a$10$INQ6rg2wAw3KWxTY6TpYYuOEOlcS/Mwyt6OXi6dDUXm16R1iCDRe2"], ["age", 20], ["sex", "male"], ["phone", 31332254], ["created_at", "2015-12-02 08:09:11.772159"], ["updated_at", "2015-12-02 08:09:11.772159"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'angus@groupie.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'angus@groupie.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'angus@groupie.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."phone" = 50808857 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password", "age", "sex", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Angus"], ["email", "angus@groupie.com"], ["encrypted_password", "$2a$10$EKazu3RBNY4sSfWaJ/67XuzxGKE1EZSYANIAFDEi46d0PZpeKgXNS"], ["age", 20], ["sex", "male"], ["phone", 50808857], ["created_at", "2015-12-02 08:09:11.845254"], ["updated_at", "2015-12-02 08:09:11.845254"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dave@groupie.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dave@groupie.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dave@groupie.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" = 88380601 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "age", "sex", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Dave"], ["email", "dave@groupie.com"], ["encrypted_password", "$2a$10$xEgqAIoo6FU9R5mM/udx3upbW9QBUAD0VJDgE11v9cen1sbA9.fpu"], ["age", 20], ["sex", "male"], ["phone", 88380601], ["created_at", "2015-12-02 08:09:11.921277"], ["updated_at", "2015-12-02 08:09:11.921277"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPoi Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pois" WHERE "pois"."name" = 'RSF' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPoi Exists (0.1ms)[0m  SELECT  1 AS one FROM "pois" WHERE "pois"."name" = 'Cream' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Runners"], ["created_at", "2015-12-02 08:09:11.940539"], ["updated_at", "2015-12-02 08:09:11.940539"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Gamers"], ["created_at", "2015-12-02 08:09:11.942856"], ["updated_at", "2015-12-02 08:09:11.942856"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Eaters"], ["created_at", "2015-12-02 08:09:11.944840"], ["updated_at", "2015-12-02 08:09:11.944840"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mGroup Load (2.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
