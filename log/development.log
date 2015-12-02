@@ -56691,3 +56691,74 @@ Processing by HomeController#index as HTML
   Rendered layouts/_messages.html.erb (0.7ms)
 Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.3ms)
   [1m[36mUser Load (8.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-01 22:30:17 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mPokemon Load (0.2ms)[0m  SELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation_links.html.erb (5.4ms)
+  Rendered layouts/_navigation.html.erb (7.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 3984ms (Views: 3944.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-01 22:30:24 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 169ms (Views: 155.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-12-01 22:30:37 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wCUrbHPOdmGyah0D4WG3nmk5SJ6BYAzu9KciBqb5g7YnkFCuvdseHAAsFg+g0cg/XUINH14/gX8wS5eg4t/lFg==", "user"=>{"name"=>"A", "email"=>"a@a.com", "phone"=>"12345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" = 12345678 LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "a@a.com"], ["encrypted_password", "$2a$10$4LVPwZ8gT9Bz1ceqQj/X0eRFPGO87q4l4s0fcvLhmSJX3eJuxiRue"], ["name", "A"], ["phone", 12345678], ["created_at", "2015-12-02 06:30:37.169342"], ["updated_at", "2015-12-02 06:30:37.169342"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-02 06:30:37.181813"], ["current_sign_in_at", "2015-12-02 06:30:37.181813"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-12-02 06:30:37.183669"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 135ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-01 22:30:37 -0800
+Processing by HomeController#index as HTML
+  [1m[36mPokemon Load (0.1ms)[0m  [1mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 142ms (Views: 140.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2015-12-01 22:31:00 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 289ms (Views: 262.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-01 22:31:05 -0800
+Processing by HomeController#index as HTML
+  [1m[36mPokemon Load (0.2ms)[0m  [1mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL[0m
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 127.3ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
