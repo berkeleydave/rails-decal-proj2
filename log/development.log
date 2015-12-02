@@ -56801,3 +56801,248 @@ Migrating to CreateGroups (20151202070320)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 07:41:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mPokemon Load (2.0ms)[0m  SELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation_links.html.erb (5.8ms)
+  Rendered layouts/_navigation.html.erb (31.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 5443ms (Views: 5353.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2015-12-02 07:41:56 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (100.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (23.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 859ms (Views: 823.4ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2015-12-02 07:42:16 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"re6wfs/2tZdrfndYNi7Pa2GKMUz0EvflwekwRUx1sa3MONO9ggltHIpT03HSre9jmamEE1Kv4SWpTNlqM1HUAQ==", "user"=>{"name"=>"Omkar ", "email"=>"omkar.raje@gmail.com", "phone"=>"1234567", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar.raje@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar.raje@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar.raje@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" = 1234567 LIMIT 1[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "omkar.raje@gmail.com"], ["encrypted_password", "$2a$10$1.kAXZvX9uHLOS7KGjQTH.XxA7SUt3GWIzjuxUrHw3hT/ZxzCyOOq"], ["name", "Omkar "], ["phone", 1234567], ["created_at", "2015-12-02 07:42:17.213965"], ["updated_at", "2015-12-02 07:42:17.213965"]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-02 07:42:17.228000"], ["current_sign_in_at", "2015-12-02 07:42:17.228000"], ["last_sign_in_ip", "10.0.2.2"], ["current_sign_in_ip", "10.0.2.2"], ["sign_in_count", 1], ["updated_at", "2015-12-02 07:42:17.231888"], ["id", 3]]
+  [1m[35m (3.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 334ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 07:42:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mPokemon Load (2.4ms)[0m  [1mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (4.3ms)
+  Rendered layouts/_navigation.html.erb (28.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 759ms (Views: 752.2ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2015-12-02 07:43:38 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6hiW4f4pm6o7ystF54zUIZHoav+YFXFcZFnUX6o00IaLzvUis9ZDIdrnb2wDD/QpacvfoD6oZ5wM/D1w1RC1Kg=="}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 07:43:38 +0000
+Processing by HomeController#index as HTML
+  [1m[35mPokemon Load (2.2ms)[0m  SELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (26.0ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 776ms (Views: 771.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2015-12-02 07:43:43 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (22.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 677ms (Views: 675.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2015-12-02 07:44:11 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fZj7R5zye//Gz644oDhu3XkWh1njLShsXBbbI6JwHC2jipcJdxGlvn+bUTxqxKf7b3Ea82FvMaqcSwSuwNEFjw==", "user"=>{"name"=>"f", "email"=>"tsunafire123@gmail.com", "phone"=>"1234566", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tsunafire123@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tsunafire123@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tsunafire123@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" = 1234566 LIMIT 1[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "tsunafire123@gmail.com"], ["encrypted_password", "$2a$10$L0dRvR.uevTPJE6wJoIFaehJDsWvMUUKuz0eclNyUBsdIY2nyDRla"], ["name", "f"], ["phone", 1234566], ["created_at", "2015-12-02 07:44:11.954188"], ["updated_at", "2015-12-02 07:44:11.954188"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-02 07:44:11.966162"], ["current_sign_in_at", "2015-12-02 07:44:11.966162"], ["last_sign_in_ip", "10.0.2.2"], ["current_sign_in_ip", "10.0.2.2"], ["sign_in_count", 1], ["updated_at", "2015-12-02 07:44:11.968842"], ["id", 4]]
+  [1m[35m (3.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 07:44:12 +0000
+Processing by HomeController#index as HTML
+  [1m[36mPokemon Load (1.7ms)[0m  [1mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_navigation_links.html.erb (4.5ms)
+  Rendered layouts/_navigation.html.erb (27.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 692ms (Views: 685.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 07:57:24 +0000
+Processing by HomeController#index as HTML
+  [1m[36mPokemon Load (3.8ms)[0m  [1mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_navigation_links.html.erb (19.1ms)
+  Rendered layouts/_navigation.html.erb (45.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 793ms (Views: 754.4ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2015-12-02 07:57:30 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5kQVyiMKLNF4/RYCg3fL+NDEzjge1foY+C9Ljxkfzpk4VnmEyOnykMGp6QZJiwLexqNTkpyX4944cpQCe77XOw=="}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 07:57:30 +0000
+Processing by HomeController#index as HTML
+  [1m[35mPokemon Load (1.9ms)[0m  SELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (23.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 765ms (Views: 760.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2015-12-02 07:57:34 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (24.7ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 702ms (Views: 700.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2015-12-02 07:57:53 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7iN0N+MMwg5XdbSsg3loHDM1sAqB/8rCGccgDbLfHJn527dWpb+H+t8G258oRSqFT3BRVcfrtLF+5T1ffDBk3A==", "user"=>{"name"=>"omkar", "email"=>"omkar.raje@gmail.com", "phone"=>"1234567", "age"=>"18", "sex"=>"13", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: name, phone, age, sex
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar.raje@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar.raje@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omkar.raje@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered devise/registrations/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (24.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 917ms (Views: 745.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2015-12-02 07:58:12 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (24.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 813ms (Views: 811.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2015-12-02 07:58:50 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SnXWMiU84CJKpYdebvXfBXmpEQEduHoCX4Nnz8eE7j1djRVTY4+l1sLW6G3FyZ2cBezwXlusBHE4oXqdCWuWeA==", "user"=>{"name"=>"omkar", "email"=>"tsunafi23@gmail.com", "phone"=>"1234567899", "age"=>"123", "sex"=>"s", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: name, phone, age, sex
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tsunafi23@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tsunafi23@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tsunafi23@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered devise/registrations/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (24.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 954ms (Views: 789.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-02 08:02:58 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (50.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (22.7ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 775ms (Views: 749.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 08:03:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mPokemon Load (1.8ms)[0m  SELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation_links.html.erb (4.7ms)
+  Rendered layouts/_navigation.html.erb (29.1ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 1502ms (Views: 1424.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2015-12-02 08:03:35 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (98.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (22.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 908ms (Views: 879.7ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2015-12-02 08:04:05 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gIjxgv/C6SEKidXS2DbQ4Ef4u/xEH9+cWDSGRfgLy+aXcDLjuXGs1YL6uuFzCpJ5O71aowILoe8/FpsXNuSzow==", "user"=>{"name"=>"f", "email"=>"f@gmail.com", "phone"=>"1232345456", "age"=>"123", "sex"=>"m", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'f@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'f@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'f@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."phone" = 1232345456 LIMIT 1[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "phone", "age", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "f@gmail.com"], ["encrypted_password", "$2a$10$78LagOhTOrnBnOcfPcNVoeC1uURtUupnB/zEDF6ynZGj9N1QtQQ7q"], ["name", "f"], ["phone", 1232345456], ["age", 123], ["sex", "m"], ["created_at", "2015-12-02 08:04:05.976943"], ["updated_at", "2015-12-02 08:04:05.976943"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-02 08:04:05.992366"], ["current_sign_in_at", "2015-12-02 08:04:05.992366"], ["last_sign_in_ip", "10.0.2.2"], ["current_sign_in_ip", "10.0.2.2"], ["sign_in_count", 1], ["updated_at", "2015-12-02 08:04:05.995039"], ["id", 5]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 340ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-02 08:04:06 +0000
+Processing by HomeController#index as HTML
+  [1m[36mPokemon Load (1.8ms)[0m  [1mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" IS NULL[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered layouts/_navigation_links.html.erb (5.1ms)
+  Rendered layouts/_navigation.html.erb (27.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 722ms (Views: 716.0ms | ActiveRecord: 3.9ms)

@@ -13,6 +13,6 @@ class UsersController < ApplicationController
     #redirect_to @article
   private
   def user_params
-  	params.require(:user).permit(:name, :phone, :email, :password, :password_confirmation)
+  	params.require(:user).permit(:name, :phone, :age, :sex, :email, :password, :password_confirmation)
   end
  end
