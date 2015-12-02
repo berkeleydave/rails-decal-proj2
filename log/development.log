@@ -56801,3 +56801,4 @@ Migrating to CreateGroups (20151202070320)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+  [1m[36mGroup Load (2.0ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
