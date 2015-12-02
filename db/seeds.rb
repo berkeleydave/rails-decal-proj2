@@ -11,7 +11,7 @@
   Pokemon.create name: name, level: rand(1..20), health: 100
 end
 
-# Make other trainers
-%w(Ash Gary Misty Brock).each do |name|
-  Trainer.create name: name, email: name+"@pokeportal.com", password: 'password'
+# Make other users
+%w(Armaan Omkar Angus Dave).each do |name|
+  User.create name: name, email: name+"@groupie.com", password: 'password', age: 20, sex: 'male'
 end
