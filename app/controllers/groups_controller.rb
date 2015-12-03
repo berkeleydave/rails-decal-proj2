@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
     def index
         @group = Group.all
+        @user = current_user
     end
 
     def show
@@ -25,7 +26,9 @@ class GroupsController < ApplicationController
 
     def join
         @group = Group.find(params[:id])
-        # @group.add() // Here we need to add the User's name to the Group.
+        @user = current_user
+        current_user.group = @group
+        current_user.save
     end
 
     private

@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   resources :groups
 
   post "groups", to: "groups#create"
-  get "users/:id", to: "users#show"
 
-  patch "groups/:id/join", to: "groups#join", as :join
+  get "users/:id", to: "users#show"
+  
+  # post "groups/:id" to: "groups#join"
 
   # patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
   # patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
