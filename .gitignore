@@ -1,5 +1,4 @@
 tmp/**
-db/development.sqlite3
 log/**
+db/**
 *.sqlite3
-log/development.log
