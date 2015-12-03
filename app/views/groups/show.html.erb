@@ -7,11 +7,14 @@
     <th>Age</th>
     <th>Sex</th>
   </tr>
+   <%= @group.latitude%>
+   <%= @group.longitude%>
   <% @group.users.each do |u| %>
   <tr><td> <%= link_to u.name, user_path(u.id) %> </td>
     <td> <%= u.email %></td>
     <td> <%= u.age %></td>
     <td> <%= u.sex %></td>
   </tr>
+
   <% end %>
 </table>
