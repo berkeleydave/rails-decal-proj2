@@ -1,0 +1,5 @@
+<h1>Group in the Database</h1>
+<% @group.each do |u| %> 
+  Name: <p> <%= link_to u.name, group_path(u) %> </p>
+<% end %>
+<%= link_to "new", groups_new_path %> 
