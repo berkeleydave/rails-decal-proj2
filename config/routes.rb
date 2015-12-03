@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  resources :users, only:[:new, :create, :destroy]
+  resources :users
   resources :groups
 
   post "groups", to: "groups#create"
