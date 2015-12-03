@@ -1583,6 +1583,7 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 157ms (Views: 155.5ms | ActiveRecord: 0.1ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-12-02 22:41:36 -0800
   [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by HomeController#index as HTML
@@ -1665,6 +1666,9 @@ Completed 200 OK in 203ms (Views: 201.1ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:41:57 -0800
+=======
+Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:36:51 -0800
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
 
 ActionController::RoutingError - uninitialized constant GroupsController:
   actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:62:in `rescue in controller'
@@ -1729,18 +1733,30 @@ ActionController::RoutingError - uninitialized constant GroupsController:
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
   railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/rails:8:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/rails:8:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
   spring (1.4.0) lib/spring/client/rails.rb:28:in `call'
   spring (1.4.0) lib/spring/client/command.rb:7:in `call'
   spring (1.4.0) lib/spring/client.rb:28:in `run'
   spring (1.4.0) bin/spring:49:in `<top (required)>'
   spring (1.4.0) lib/spring/binstub.rb:11:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/spring:16:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/spring:16:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
    () rails:3:in `<main>'
 
 
 
+<<<<<<< HEAD
 Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:41:58 -0800
+=======
+Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:36:51 -0800
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
 
 ActionController::RoutingError - uninitialized constant GroupsController:
   actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:62:in `rescue in controller'
@@ -1805,20 +1821,34 @@ ActionController::RoutingError - uninitialized constant GroupsController:
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
   railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/rails:8:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/rails:8:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
   spring (1.4.0) lib/spring/client/rails.rb:28:in `call'
   spring (1.4.0) lib/spring/client/command.rb:7:in `call'
   spring (1.4.0) lib/spring/client.rb:28:in `run'
   spring (1.4.0) bin/spring:49:in `<top (required)>'
   spring (1.4.0) lib/spring/binstub.rb:11:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/spring:16:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/spring:16:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
    () rails:3:in `<main>'
 
 
 
+<<<<<<< HEAD
 Started POST "/__better_errors/9f94f275622cb8f2/variables" for 127.0.0.1 at 2015-12-02 22:41:58 -0800
 
 NameError (wrong local variable name `#$!' for #<Binding:0x007f96fbf8a720>):
+=======
+Started POST "/__better_errors/cd3d2480c62c557a/variables" for 127.0.0.1 at 2015-12-02 22:36:52 -0800
+
+NameError (wrong local variable name `#$!' for #<Binding:0x007fa37eaaa860>):
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
   better_errors (2.1.1) lib/better_errors/stack_frame.rb:73:in `local_variable_get'
   better_errors (2.1.1) lib/better_errors/stack_frame.rb:73:in `block in local_variables'
   better_errors (2.1.1) lib/better_errors/stack_frame.rb:71:in `each'
@@ -1883,6 +1913,7 @@ NameError (wrong local variable name `#$!' for #<Binding:0x007f96fbf8a720>):
   bin/rails:3:in `<main>'
 
 
+<<<<<<< HEAD
   Rendered /Users/savetheworld/.rvm/gems/ruby-2.2.0@rails_decal/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
   Rendered /Users/savetheworld/.rvm/gems/ruby-2.2.0@rails_decal/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /Users/savetheworld/.rvm/gems/ruby-2.2.0@rails_decal/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
@@ -1901,6 +1932,15 @@ Completed 200 OK in 135ms (Views: 132.5ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:42:25 -0800
+=======
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:36:54 -0800
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
 
 ActionController::RoutingError - uninitialized constant GroupsController:
   actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:62:in `rescue in controller'
@@ -1965,18 +2005,30 @@ ActionController::RoutingError - uninitialized constant GroupsController:
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
   railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/rails:8:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/rails:8:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
   spring (1.4.0) lib/spring/client/rails.rb:28:in `call'
   spring (1.4.0) lib/spring/client/command.rb:7:in `call'
   spring (1.4.0) lib/spring/client.rb:28:in `run'
   spring (1.4.0) bin/spring:49:in `<top (required)>'
   spring (1.4.0) lib/spring/binstub.rb:11:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/spring:16:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/spring:16:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
    () rails:3:in `<main>'
 
 
 
+<<<<<<< HEAD
 Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:42:25 -0800
+=======
+Started GET "/groups/new" for 127.0.0.1 at 2015-12-02 22:36:54 -0800
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
 
 ActionController::RoutingError - uninitialized constant GroupsController:
   actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:62:in `rescue in controller'
@@ -2041,20 +2093,34 @@ ActionController::RoutingError - uninitialized constant GroupsController:
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
   railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
   railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/rails:8:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/rails:8:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
   spring (1.4.0) lib/spring/client/rails.rb:28:in `call'
   spring (1.4.0) lib/spring/client/command.rb:7:in `call'
   spring (1.4.0) lib/spring/client.rb:28:in `run'
   spring (1.4.0) bin/spring:49:in `<top (required)>'
   spring (1.4.0) lib/spring/binstub.rb:11:in `<top (required)>'
+<<<<<<< HEAD
    () Users/savetheworld/group-proj/bin/spring:16:in `<top (required)>'
+=======
+   () Users/davidliu/Desktop/Ruby/rails-decal-proj2/bin/spring:16:in `<top (required)>'
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
    () rails:3:in `<main>'
 
 
 
+<<<<<<< HEAD
 Started POST "/__better_errors/9d851e85ed6ef11a/variables" for 127.0.0.1 at 2015-12-02 22:42:26 -0800
 
 NameError (wrong local variable name `#$!' for #<Binding:0x007f96fcc227a8>):
+=======
+Started POST "/__better_errors/4389b4d2cefc2214/variables" for 127.0.0.1 at 2015-12-02 22:36:54 -0800
+
+NameError (wrong local variable name `#$!' for #<Binding:0x007fa37a85bc48>):
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
   better_errors (2.1.1) lib/better_errors/stack_frame.rb:73:in `local_variable_get'
   better_errors (2.1.1) lib/better_errors/stack_frame.rb:73:in `block in local_variables'
   better_errors (2.1.1) lib/better_errors/stack_frame.rb:71:in `each'
@@ -2119,6 +2185,7 @@ NameError (wrong local variable name `#$!' for #<Binding:0x007f96fcc227a8>):
   bin/rails:3:in `<main>'
 
 
+<<<<<<< HEAD
   Rendered /Users/savetheworld/.rvm/gems/ruby-2.2.0@rails_decal/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
   Rendered /Users/savetheworld/.rvm/gems/ruby-2.2.0@rails_decal/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
   Rendered /Users/savetheworld/.rvm/gems/ruby-2.2.0@rails_decal/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
@@ -2133,3 +2200,9 @@ Processing by Devise::RegistrationsController#edit as HTML
   Rendered layouts/_navigation.html.erb (4.7ms)
   Rendered layouts/_messages.html.erb (0.3ms)
 Completed 200 OK in 200ms (Views: 197.7ms | ActiveRecord: 0.2ms)
+=======
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidliu/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.0ms)
+>>>>>>> 3a586ce9bdd9cae747ba1d6bf74656c88cbb348e
