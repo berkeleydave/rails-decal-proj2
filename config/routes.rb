@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :users, only:[:new, :create, :destroy]
-  resources :groups, only:[:new, :create, :destroy]
+  resources :groups
 
   post "groups", to: "groups#create"
 
