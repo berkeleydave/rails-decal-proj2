@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  resources :users, only:[:new, :create]
-  resources :groups, only:[:new, :create]
+  resources :users, only:[:new, :create, :destroy]
+  resources :groups, only:[:new, :create, :destroy]
+
+  post "groups", to: "groups#create"
 
   # patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
   # patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
