@@ -24,11 +24,12 @@ class GroupsController < ApplicationController
         @group = Group.new
     end
 
-    def join
+    def update
         @group = Group.find(params[:id])
         @user = current_user
         current_user.group = @group
         current_user.save
+        redirect_to @group
     end
 
     private

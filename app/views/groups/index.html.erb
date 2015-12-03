@@ -1,5 +1,15 @@
 <h1>Here are all the Groups you can join!</h1>
-<% @group.each do |u| %> 
-  <p> <%= link_to u.name, group_path(u) %> </p>
-  <%= button_to "Join this group!", group_path(@user.id), :class => "button medium", :method => :post %>
+<% @group.each do |g| %> 
+  <p> <%= link_to g.name, group_path(g) %> </p>
+  <% g.users.each do |u| %>
+	  <table>
+		  	<tr>
+		  	  	<td> <%= u.name %> </td>
+		  	    <td> <%= u.email %></td>
+		  	    <td> <%= u.age %></td>
+		  	    <td> <%= u.sex %></td>
+		  	</tr>
+	  	</table>
+	  <% end %>
+  <%= button_to "Join this group!", group_path(g.id), :class => "button medium", :method => :patch %>
 <% end %>

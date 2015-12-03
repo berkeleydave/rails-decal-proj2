@@ -8,7 +8,7 @@
     <th>Sex</th>
   </tr>
   <% @group.users.each do |u| %>
-  <tr><td> <%= u.name %> </td>
+  <tr><td> <%= link_to u.name, user_path(u.id) %> </td>
     <td> <%= u.email %></td>
     <td> <%= u.age %></td>
     <td> <%= u.sex %></td>
