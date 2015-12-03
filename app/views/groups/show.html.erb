@@ -2,7 +2,16 @@
 <p>Group Name: <%= @group.name %></p>
 <p>Members: </p>
 <table>
-  <tr><td>test</td></tr>
-  <tr><td>asdf</td></tr>
+  <tr><th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Sex</th>
+  </tr>
+  <% @group.users.each do |u| %>
+  <tr><td> <%= u.name %> </td>
+    <td> <%= u.email %></td>
+    <td> <%= u.age %></td>
+    <td> <%= u.sex %></td>
+  </tr>
+  <% end %>
 </table>
-    

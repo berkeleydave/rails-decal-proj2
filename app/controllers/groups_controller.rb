@@ -11,6 +11,8 @@ class GroupsController < ApplicationController
         @group = Group.new(group_params)
 
         if @group.save
+            current_user.group = @group
+            current_user.save
             redirect_to @group
         else
             render 'new'
