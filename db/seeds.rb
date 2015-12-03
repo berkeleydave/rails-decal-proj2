@@ -11,6 +11,11 @@
   Location.create name: name
 end
 
+
+%w(Runners Gamers Eaters).each do |name|
+  Group.create name: name
+end
+
 # Make other users
 %w(Armaan Omkar Angus Dave).each do |name|
   User.create name: name, email: name+"@groupie.com", password: 'password', age: 20, sex: 'male', phone: rand(10000000..99999999)
@@ -23,7 +28,3 @@ end
 end
 
 # Make Groups
-
-%w(Runners Gamers Eaters).each do |name|
-  Group.create name: name
-end
