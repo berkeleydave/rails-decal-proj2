@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post "groups", to: "groups#create"
   get "users/:id", to: "users#show"
 
-  patch "groups/:id/join", to: "groups#join", as :join
+#  patch "groups/:id/join", to: "groups#join", as :join
 
   # patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
   # patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
