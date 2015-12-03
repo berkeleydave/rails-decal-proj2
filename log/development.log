@@ -3547,3 +3547,123 @@ Processing by GroupsController#show as HTML
   Rendered layouts/_navigation.html.erb (2.4ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 146ms (Views: 144.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:22:20 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 166ms (Views: 164.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:23:39 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 145ms (Views: 143.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:23:50 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 179ms (Views: 177.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:24:01 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 137ms (Views: 135.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:24:10 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 168ms (Views: 166.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:25:13 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 151ms (Views: 149.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:25:26 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 141.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:26:11 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 176ms (Views: 175.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:26:30 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2015-12-02 23:26:43 -0800
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGroup Load (0.3ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 153.7ms | ActiveRecord: 0.4ms)
