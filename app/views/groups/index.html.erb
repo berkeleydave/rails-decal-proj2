@@ -1,5 +1,6 @@
-<h1>Group in the Database</h1>
+<h1>Here are all the Groups you can join!</h1>
 <% @group.each do |u| %> 
   Name: <p> <%= link_to u.name, group_path(u) %> </p>
+  <%= button_to "Join this group!", group_path(:id), :class => "button medium", :method => :post %>
 <% end %>
-<%= link_to "new", groups_new_path %> 
+<!-- Pass your name to the file. -->
