@@ -1,3 +1,4 @@
 tmp/**
 db/development.sqlite3
 log/**
+.gitignore
