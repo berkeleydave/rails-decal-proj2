@@ -1,12 +1,11 @@
-class TrainersController < ApplicationController
-  before_filter :authenticate_trainer!
+class UsersController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
-    @trainers = Trainer.all
+    @users = User.all
   end
 
   def show
-    @trainer = Trainer.find(params[:id])
+    @user = User.find(params[:id])
   end
-
 end

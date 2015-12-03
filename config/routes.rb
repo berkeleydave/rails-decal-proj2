@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post "groups", to: "groups#create"
 
+  post ""
+
   # patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
   # patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
 
