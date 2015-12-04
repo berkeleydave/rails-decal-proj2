@@ -10,6 +10,7 @@
 		<h1 style="color:Green; font-family: cursive">Create New Group</h1>
 		<%= simple_form_for @group do |f| %>
 		  <%= f.input :name %>
+		  <%= f.input :address %>
 		  <%= f.button :submit %>
 		<% end %>
 	</div>

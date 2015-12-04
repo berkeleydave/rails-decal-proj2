@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
 
 	validates :phone, uniqueness: true
 	validates :phone, presence: true
+    geocoded_by :ip_address,
+    :latitude => :lat, :longitude => :lon
+    after_validation :geocode
+
 end

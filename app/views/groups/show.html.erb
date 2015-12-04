@@ -11,7 +11,6 @@
 
 
   </tr>
-
   <% @group.users.each do |u| %>
     <% if current_user.in?(@group.users) %>
     <tr>
@@ -26,6 +25,7 @@
     <td> <%= u.age %></td>
     <td> <%= u.sex %></td>
   </tr>
+
   <% end %>
 
 </table>
