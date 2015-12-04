@@ -2,16 +2,38 @@
 <p>Group Name: <%= @group.name %></p>
 <p>Members: </p>
 <table>
-  <tr><th>Name</th>
+  <tr>
+    <th>Name</th>
     <th>Email</th>
+    <th>Phone</th>
     <th>Age</th>
     <th>Sex</th>
+
+
   </tr>
+
   <% @group.users.each do |u| %>
-  <tr><td> <%= link_to u.name, user_path(u.id) %> </td>
-    <td> <%= u.email %></td>
+    <% if current_user.in?(@group.users) %>
+    <tr>
+      <td> <%= link_to u.name, user_path(u.id) %> </td>
+      <td> <%= u.email %></td>
+      <td> <%= u.phone %></td>
+    <% else %>
+      <td> <%= u.name %> </td>
+      <td></td>
+      <td></td>
+    <% end %>
     <td> <%= u.age %></td>
     <td> <%= u.sex %></td>
   </tr>
   <% end %>
+
 </table>
+<br/><br/>
+<%= button_to 'Back to GroupFinder', groups_path, :class => "button large", :method => :get %>
+<br/><br/>
+
+<!-- This doesn't work... -->
+<% if @group.owner == current_user.name %>
+    <%= button_to 'Delete this group.', groups_path(@group.id), :class => "button small", :method => :destroy %>
+<% end %>

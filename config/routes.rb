@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get "users/:id", to: "users#show"
 
   patch "groups/:id", to: "groups#update"
+  delete "groups/:id", to: "groups#destroy"
 
-  # patch "pokemons/:id/capture", to: "pokemons#capture", as: :capture
-  # patch "pokemons/:id/damage", to: "pokemons#damage", as: :damage
 end

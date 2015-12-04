@@ -10,6 +10,7 @@ class GroupsController < ApplicationController
 
     def create
         @group = Group.new(group_params)
+        @group.owner = current_user.name
 
         if @group.save
             current_user.group = @group
@@ -30,6 +31,10 @@ class GroupsController < ApplicationController
         current_user.group = @group
         current_user.save
         redirect_to @group
+    end
+
+    def delete
+        current_user.group.destroy
     end
 
     private
