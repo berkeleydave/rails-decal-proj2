@@ -6,10 +6,12 @@
 	<br/><br/>
 
 	<!-- Input Form -->
-	<div style="height:300px; width:50%; margin:auto; border-style: double; border-color: purple; padding:50px; font-family: Comic Sans MS, cursive, sans-serif">
+	<div style="height:350px; width:50%; margin:auto; border-style: double; border-color: purple; padding:50px; font-family: Comic Sans MS, cursive, sans-serif">
 		<h1 style="color:Green; font-family: cursive">Create New Group</h1>
 		<%= simple_form_for @group do |f| %>
+
 		  <%= f.input :name %>
+		  <%= f.input :address %>
 		  <%= f.button :submit %>
 		<% end %>
 	</div>
